@@ -45,8 +45,9 @@ public class LampTest {
     @Test
     public void testTurnOn() {
         System.out.println("test turnOn");
-        instance = new Lamp();
-        instance.turnOn();
+        Lamp instance = new Lamp();
+        String expResult = "Light on? true";
+        String result = instance.turnOn();
     }
 
     /**
@@ -55,8 +56,24 @@ public class LampTest {
     @Test
     public void testTurnOff() {
         System.out.println("test turnOff");
-        instance = new Lamp();
-        instance.turnOff();
+        Lamp instance = new Lamp();
+        String expResult = "Light on? false";
+        String result = instance.turnOff();
     }
     
+    /**
+     * Test of getState method, of class Lamp.
+     */
+    @Test
+    public void testGetState() {
+        System.out.println("getState");
+        Lamp instance = new Lamp();
+        boolean expResult = false;
+        boolean result = instance.getState();
+        assertEquals(expResult, result);
+        instance.turnOn();
+        result =  instance.getState();
+        expResult = true;
+        assertEquals(expResult, result);
+    }
 }

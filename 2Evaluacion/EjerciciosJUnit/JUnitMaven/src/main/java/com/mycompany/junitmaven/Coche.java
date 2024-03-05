@@ -11,7 +11,7 @@ public class Coche {
         this.precioBase=precioBase;
     }
     
-public float precioFinal(float descuento) throws Exception {
+    public float precioFinal(float descuento) throws Exception {
         float precioConDescuento = this.precioBase;
         if(descuento < 0) {
             throw new Exception("Descuento erróneo porque es menor que 0");

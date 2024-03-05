@@ -6,19 +6,23 @@ class Lamp {
   // stores the value for light
   // true if light is on
   // false if light is off
-  boolean isOn;
+  private boolean isOn=false;
 
   // method to turn on the light
-  void turnOn() {
+  String turnOn() {
     isOn = true;
-    System.out.println("Light on? " + isOn);
+    return ("Light on? " + isOn);
 
   }
 
   // method to turnoff the light
-  void turnOff() {
+  String turnOff() {
     isOn = false;
-    System.out.println("Light on? " + isOn);
+    return "Light on? " + isOn;
+  }
+  
+  boolean getState(){
+      return isOn;
   }
 }
 
