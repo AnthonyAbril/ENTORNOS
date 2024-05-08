@@ -3,7 +3,7 @@ package refactoring1;
 
 public class Refactoring1 {
     public static void main(String[] args) {
-      int nre = 3;
+      int nre = 5;
       
       System.out.println("Factorial de " + nre + ": " + calculFactorial(nre));
     }
